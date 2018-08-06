@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shop</title>
+
+    <style>
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: 微软雅黑;
+        }
+
+        .align {
+            align:"center";
+        }
+
+        .menu  {
+
+            height: 100%;
+            width: 35px;
+            background-color: black;
+            position: fixed;
+            top: 0px;
+            right: -35px;
+            font-size: 20px;
+            color: white;
+            transition: all .2s ease-in-out;
+        }
+
+        .menu-img {
+
+            height: 35px;
+            width: 35px;
+            background-size: cover;
+
+        }
+
+        .menu-gwc {
+
+            height: 100px;
+            width: 35px;
+            background-color: black;
+            position: fixed;
+            right: 0px;
+            top: 40%;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .img-gwc {
+
+            position: absolute;
+            left: 4px;
+            height: 30px;
+            width: 30px;
+            background-size: contain;
+            background-position: center;
+
+        }
+
+        .menu-gwc:hover .menu{
+
+            right: 0px;
+
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .head {
+
+            display: inline-block;
+            height: 100px;
+            width: 1010px;
+
+        }
+        
+        .img-h {
+
+            margin-left: 100px;
+            height: 60px;
+            width: 200px;
+            background-size: 100%;
+            background-position: center;
+            display: inline-block;
+        }
+
+
+        .search-f {
+
+            display: inline-block;
+            height: 60px;
+            width: 300px;
+            position: relative;
+            top: -30px;
+            left: 30px;
+
+        }
+
+        .search {
+
+            background-color: blue;
+            color: white;
+            font-size: 15px;
+        }
+
+        .login {
+
+            display: inline-block;
+            height: 100px;
+            width: 300px;
+
+        }
+
+        .choose {
+
+            background-color:lightgray;
+            height: 200px;
+            width: 1010px;
+            text-align: center;
+            
+        }
+
+        .container {
+
+            width: 1010px;
+            margin-top: 100px;
+            margin-left: 455px;
+
+        }
+
+        .product {
+
+            display: inline-block;
+            height: 320px;
+            width: 193px;
+            margin: 2px;
+        }
+
+        .product:hover {
+
+            border:  red 5px;
+            box-shadow: 5px 5px 10px grey;
+        }
+
+        .img {
+
+            height: 180px;
+            width: 180px;
+            background-size: contain;
+            background-position: bottom;
+
+        }
+
+        .price {
+
+            margin: 10px;
+            text-align: left;
+            font-size: 20px;
+            color: crimson;
+            height: 24px;
+            font-weight: 700;
+        }
+
+        .detail {
+
+            font-size: 14px;
+            color: black;
+            margin: 10px;
+            font-weight: 200;
+            height: 30px;
+        }
+
+        .shop {
+
+            margin: 10px;
+            color: darkgrey;
+            font-size: 10px;
+            text-align: left;
+            height: 12px;
+        }
+
+        .buy {
+
+            height: 30px;
+            background-color: cornflowerblue;
+            text-align: center;
+            font-size: 26px;
+            color: white;
+            line-height: 30px;
+        }
+
+        .buy:hover {
+
+            box-shadow: 5px 5px 10px gray;
+            background-color: red;
+
+        }
+
+        .tmtu {
+
+            height: 300px;
+            width: 486px;
+            background-size: cover;
+            transition: all 4s linear;
+        }
+
+        .tmtu:hover {
+
+            animation: move 4s linear;
+        }
+
+        @keyframes move {
+
+            0%{
+
+            }
+
+            25%{
+                transform: translate(0%,100%);
+            }
+
+            50%{
+                transform: translate(50%,0%);
+                opacity: 80%;
+            }
+
+            75%{
+                transform: translate(100%,100%);
+            }
+
+            100%{
+                transform: translate(100%,0%);
+            }
+
+        }
+
+        .top {
+
+            height: 35px;
+            width: 35px;
+            background-size: cover;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <a name="top"></a>
+    <div class="tmtu" style="background-image: url(../picture/tmtu.jpg)"></div>
+    <div class="container">
+        <div class="head align">
+
+            <div class="img-h" style="background-image: url(../picture/tmlogo.jpg)"></div>
+            <div class="search-f">
+                <form class="form" name="searchTop" action="//list.tmall.com/search_product.htm" target= blank>
+                    <input type="text" name="q" accesskey="s" placeholder="搜索天猫商品/品牌/店铺">
+                    <button type="submit" class="search">搜索</button>
+                </form>
+            </div>
+            <div class="login">
+
+                账号<input name="账号" type="text" placeholder="请输入账号"><br>
+                密码<input name="密码" type="password" placeholder="请输入密码"><br>
+                <input type="submit" value="登陆">
+                <input type="submit" value="注册">
+            </div>
+
+        </div>
+
+
+
+        <div class="menu-gwc" >
+            <div class="menu">
+
+                <div class="menu-img" style="background-image:url(../picture/品牌标识-天猫.svg)"></div>
+                <div class="menu-img" style="background-image:url(../picture/购物车.svg)"></div>
+                <div class="menu-img" style="background-image:url(../picture/人民币.svg)"></div>
+                <div class="menu-img" style="background-image:url(../picture/星星.svg)"></div>
+                <div class="menu-img" style="background-image:url(../picture/时间.svg)"></div>
+                <div class="top" style="background-image: url(../picture/回到顶部.svg)"><a href="#top"></a></div>
+
+            </div>
+            购物车
+            <div class="img-gwc" style="background-image: url(../picture/购物车.svg)"></div>
+        </div>
+
+
+
+        <div class="choose align">
+
+            <div class="display">
+
+                <select>
+
+                    <option value="">综合排序</option>
+                    <option value="">价格</option>
+                    <option value="">销量</option>
+                    <option value="">新品</option>
+                </select>
+            </div>
+
+            <div class="display">
+
+                <label><input name="brand" type="radio">英特尔</label>
+                <label><input name="brand" type="radio">AMD</label>
+                <label><input name="brand" type="radio">技嘉</label>
+                <label><input name="brand" type="radio">华硕</label>
+                <label><input name="brand" type="radio">铭瑄</label>
+                <label><input name="brand" type="radio">七彩虹</label>
+                <br>
+                <label><input name="choices" type="checkbox">包邮</label>
+                <label><input name="choices" type="checkbox">货到付款</label>
+                <label><input name="choices" type="checkbox">满减</label>
+                <label><input name="choices" type="checkbox">折扣</label>
+                <label><input name="choices" type="checkbox">搭配减价</label>
+            </div>
+        </div>
+        <div class="product ">
+
+            <div class="img"  style="background-image: url(../picture/cpubt.jpg)"></div>
+            <div class="price">￥699</div>
+            <div class="detail"><a href="">英特尔G4560 INTEL 1151 3.5GHZ</a></div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product ">
+            <div class="img" style="background-image: url(../picture/cpui3.jpg)"></div>
+            <div class="price">￥759</div>
+            <div class="detail">英特尔i3-8100 INTEL 1151 3.2GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product">
+            <div class="img" style="background-image: url(../picture/cpui5.jpg)"></div>
+            <div class="price">￥1599</div>
+            <div class="detail">英特尔i5-8500 INTEL 1151 3.0GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product">
+            <div class="img" style="background-image: url(../picture/cpui7.jpg)"></div>
+            <div class="price">￥2799</div>
+            <div class="detail">英特尔i7-8700k INTEL 1151 3.7GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product ">
+            <div class="img" style="background-image: url(../picture/cpui9.jpg)"></div>
+            <div class="price">￥15099</div>
+            <div class="detail">英特尔i9-7980XE INTEL</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product ">
+
+            <div class="img"  style="background-image: url(../picture/cpubt.jpg)"></div>
+            <div class="price">￥699</div>
+            <div class="detail"><a href="">英特尔G4560 INTEL 1151 3.5GHZ</a></div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product ">
+            <div class="img" style="background-image: url(../picture/cpui3.jpg)"></div>
+            <div class="price">￥759</div>
+            <div class="detail">英特尔i3-8100 INTEL 1151 3.2GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product">
+            <div class="img" style="background-image: url(../picture/cpui5.jpg)"></div>
+            <div class="price">￥1599</div>
+            <div class="detail">英特尔i5-8500 INTEL 1151 3.0GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product">
+            <div class="img" style="background-image: url(../picture/cpui7.jpg)"></div>
+            <div class="price">￥2799</div>
+            <div class="detail">英特尔i7-8700k INTEL 1151 3.7GHZ</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+        <div class="product ">
+            <div class="img" style="background-image: url(../picture/cpui9.jpg)"></div>
+            <div class="price">￥15099</div>
+            <div class="detail">英特尔i9-7980XE INTEL</div>
+            <div class="shop">英特尔官方旗舰店</div>
+            <div class="buy">buy</div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

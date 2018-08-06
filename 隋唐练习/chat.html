@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAT</title>
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+
+            height: 1000px;
+            width: 1000px;
+            background-size: cover;
+            background-position: center;
+            background-image: url(../picture/chatbg.jpg);
+            overflow-y: scroll;
+        }
+
+        .papper {
+
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            height: 2000px;
+            width: 1000px;
+        }
+
+        .main {
+
+            height: 150px;
+            width: 1000px;
+            background-color: black;
+            font-family: 黑体;
+            font-size: 65px;
+            color: white;
+            line-height: 150px;
+        }
+
+        .head {
+
+            position: relative;
+            top: -200px;
+            left: 0px;
+            height:100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+
+        }
+
+        .p1 {
+            position: relative;
+            left: 50px;
+            height: 300px;
+            width: 300px;
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        .head2 {
+
+            position: relative;
+            top: 100px;
+            left: 900px;
+            height:100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .head3 {
+
+            position: relative;
+            top: 250px;
+            left: 0px;
+            height:100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .window{
+            position: relative;
+            top: 550px;
+            left: 100px;
+            height: 150px;
+            width: 750px;
+            background-color: lawngreen;
+            border-radius: 20px;
+            position: absolute;
+            font-size: 100px;
+            text-indent: 40px;
+        }
+
+        .window2{
+            position: relative;
+            top: 800px;
+            left: 150px;
+            height: 150px;
+            width: 450px;
+            background-color: white;
+            border-radius: 20px;
+            position: absolute;
+            font-size: 100px;
+        }
+
+        .angel {
+
+            position: relative;
+            top: -80px;
+            left: 710px;
+            height: 50px;
+            width: 50px;
+            background-color: lawngreen;
+            transform: rotate(45deg);
+        }
+
+        .angel2 {
+
+            position: relative;
+            top: -10px;
+            left: -10px;
+            height: 50px;
+            width: 50px;
+            background-color: white;
+            transform: rotate(45deg);
+            display: inline-block;
+        }
+
+        .yuyin {
+
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+            display: inline-block;
+            position: relative;
+            top: 18px;
+            left: -50px;
+        }
+
+        .shuru {
+
+            position: absolute;
+            top: 1000px;
+            height: 150px;
+            width: 1000px;
+            background-color: lightgray;
+        }
+
+        .yuyin1 {
+
+            position: relative;
+            top: 25px;
+            left: 25px;
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+            background-image: url(../picture/语音1.svg);
+
+        }
+
+        .shuru1 {
+
+            position: relative;
+            top: -80px;
+            left: 150px;
+            height: 110px;
+            width: 590px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .biaoqing {
+
+            position: relative;
+            top: -185px;
+            left: 750px;
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .gongneng {
+
+
+            position: relative;
+            top: -285px;
+            left: 880px;
+            height: 100px;
+            width: 100px;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .second {
+
+            position: relative;
+            left: 630px;
+            top: 200px;
+            height: 50px;
+            width: 50px;
+            color: lightgray;
+            font-family: 微软雅黑;
+            font-size: 50px;
+        }
+
+        .yuyin1:hover {
+
+            background-image: url("../picture/键盘.svg");
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="papper">
+            <div class="main"> <微信       int * regret=null       ···</div>
+            <div class="head" style="background-image: url(../picture/头像女孩.svg)"></div>
+            <div class="p1" style="background-image: url(../picture/p1.jpeg)"></div>
+            <div class="head2" style="background-image: url(../picture/头像男孩.svg)"></div>
+            <div class="window">呵呵，MDZZ
+                <div class="angel"></div>
+            </div>
+            <div class="head3" style="background-image: url(../picture/头像女孩.svg)"></div>
+            <div class="window2">
+                <div class="angel2"></div>
+                <div class="yuyin" style="background-image: url(../picture/语音.svg)"></div>
+            </div>
+
+            <div class="second">8"</div>
+            <div class="shuru">
+
+                <div class="yuyin1"></div>
+                <div class="shuru1"></div>
+                <div class="biaoqing" style="background-image: url(../picture/表情.svg)"></div>
+                <div class="gongneng" style="background-image: url(../picture/加.svg)"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="text"></div>
+
+</body>
+</html>
