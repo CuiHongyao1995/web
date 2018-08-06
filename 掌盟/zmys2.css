@@ -1,0 +1,739 @@
+
+
+
+
+/*  任务栏  begin  */
+
+#mission {
+    position: absolute;
+    top: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: 40px;
+    color: #535353;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 12px;
+    z-index: 5;
+}
+
+#signal-left {
+
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#signal-left div {
+
+    margin-left: 4px;
+}
+
+#operation {
+
+    height: 100%;
+    width: 80px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#xg {
+
+    height: 100%;
+    width: 30px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#signal-center {
+
+    width: 50px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+#signal-right {
+
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#signal-right div{
+    /*margin-right: 4px;*/
+}
+
+#signal-area {
+
+    height: 16px;
+    width: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#signal-area div {
+
+    width: 4px;
+    margin-left: 3px;
+    border-radius: 1px;
+}
+
+#signal-area div:nth-child(1) {
+
+    height: 8px;
+}
+
+#signal-area div:nth-child(2) {
+
+    height: 12px;
+}
+
+#signal-area div:nth-child(3) {
+
+    height: 16px;
+}
+
+#signal-area div:nth-child(4) {
+
+    height: 20px;
+}
+
+.signal-ok {
+
+    background-color: #000000;
+}
+
+.signal-lose {
+
+    background-color: gray;
+}
+
+#battery {
+
+    margin-right: 20px;
+    width: 40px;
+    height: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#battery-body {
+
+    height: 12px;
+    width: 32px;
+    border: solid 1px #494949;
+    border-radius: 4px;
+}
+
+#battery-header {
+
+    height: 6px;
+    width: 2px;
+    background-color: #494949;
+    border-radius : 0px 1px 1px 0px;
+}
+
+#battery-core {
+
+    height: 10px;
+    width: 26px;
+    background-color: lawngreen;
+    margin: 1px;
+}
+
+@keyframes charge {
+
+    0% {
+        width: 1px;
+        background-color: crimson;
+    }
+    20% {
+        width: 6px;
+        background-color: yellow;
+    }
+    80% {
+        width: 24px;
+        background-color: lawngreen;
+    }
+    100% {
+        width: 30px;
+        background-color: lawngreen;
+    }
+
+}
+
+.charging {
+
+    animation: charge 6s linear infinite;
+}
+
+
+
+* {
+
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+/*  个人信息栏  begin  */
+
+.container {
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    /*max-height: 1920px;*/
+    min-height: 1334px;
+    /*max-width: 1080px;*/
+    min-width: 750px;
+    /*overflow: hidden;*/
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.border {
+
+    border: red 1px solid;
+}
+
+.btm {
+
+    height: 100%;
+    width: 80%;
+    background-image: url(../picture/EZ.png);
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+}
+
+.btm-cover {
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(25,25,25,.6);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.head-btm {
+
+    margin-top: 10%;
+    height: 100px;
+    width: 100px;
+    border: darkgoldenrod 3px solid;
+    border-radius: 50%;
+    background-image: url(../picture/RNG.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.kuang {
+
+    margin-top: -2.67%;
+    height: 21.7%;
+    width: 83.33%;
+    border:2px darkgoldenrod solid;
+    position: relative;
+    top: -30px;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.kuang-1 {
+
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.saoma {
+
+    height: 60px;
+    width: 60px;
+    background-image: url(../picture/扫一扫.svg);
+    background-size: cover;
+    margin: 10px;
+}
+
+.jiantou {
+
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    background-image: url(../picture/箭头-右.svg);
+    background-size: cover;
+}
+
+.kuang-name {
+
+    margin-top: 17%;
+    height: 60px;
+    width: 80%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 40px;
+
+}
+
+/*.hr {*/
+
+/*width: 80%;*/
+/*size: 2px;*/
+/*background-color: red;*/
+/*border: none;*/
+/*}*/
+
+.kuang-3 {
+
+    margin-top: 5%;
+    height: 25%;
+    width: 100%;
+}
+
+.kuang-3-top {
+
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 45px;
+    color: gold;
+}
+
+.kuang-3-ele {
+
+    height: 40px;
+    width: auto;
+}
+
+.kuang-3-bot {
+
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+}
+
+.my {
+
+    flex: 1;
+    width: 75%;
+    margin-left: -10%;
+}
+
+.myele {
+
+    /*margin-top: 30px;*/
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: left;
+}
+
+.myele-p {
+
+    margin:17px;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-position: center;
+}
+
+.myele-text {
+
+    margin: 10px;
+    height: 50px;
+    width: auto;
+    font-size: 35px;
+    color: white;
+    line-height: 50px;
+    font-family: 微软雅黑;
+}
+
+.btm-btm {
+    margin-bottom: 40px;
+    height: 100px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btm-btm-button {
+    border-radius: 32px;
+    height: 64px;
+    width: 140px;
+    background-color: rgba(25,25,25,.9);
+    display: flex;
+    align-items: center;
+}
+
+.btm-btm-button-p {
+
+    height: 58px;
+    width: 58px;
+    background-size: contain;
+    background-position: center;
+}
+
+.btm-btm-button-t {
+
+    height: 60px;
+    width: 80px;
+    color: white;
+    font-size: 30px;
+    line-height: 60px;
+}
+
+/*个人信息栏end*/
+
+
+
+
+
+/*  盟友页面 start  */
+
+.container section {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    transform: translateX(0%);
+    transition: all 0.4s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.page1{
+
+    width: 100%;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    /*flex: 1;*/
+    /*flex-flow: column;*/
+    /*display: flex;*/
+    z-index: 3;
+    transition: all 0.25s; position: relative;
+    overflow: scroll;
+}
+
+.top-menu {
+
+    padding-top: 20px;
+    height: 120px;
+    width: 100%;
+    background-color: white;
+    /*overflow-x:scroll;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+}
+
+#head-click {display: none}
+
+.container section label{
+    margin-top: 10px;
+    margin-left: 30px;
+    height: 70px;
+    width: 70px;
+    border: gold 3px solid;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain ;
+    background-image: url(../picture/RNG.jpg);
+    cursor: pointer;
+}
+
+#head-click:checked ~ section {transform: translateX(80%);}
+
+/*.top-head {*/
+
+
+/*}*/
+
+.top-menu-border {
+
+    height: 100px;
+    width: 40%;
+    overflow-x: scroll;
+}
+
+.top-menu-ele-f {
+
+    height: 90px;
+    width: 960px;
+    float: left;
+}
+
+.top-border-ele {
+    margin-top: 5px;
+    margin-left: 40px;
+    height: 88px;
+    width: 80px;
+    color: darkgray;
+    font-size: 40px;
+    line-height: 88px;
+    float: left;
+}
+
+.search {
+
+    margin-right: 20px;
+    height: 70px;
+    width: 70px;
+    background-image:url(../picture/消息.svg);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.search-kuang {
+
+    width: 100%;
+    height:90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: silver 1px solid;
+}
+
+.search-shuru {
+
+    height: 80%;
+    width: 90%;
+    background-color: #d5d5d5;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-fdj {
+
+    margin-bottom: 5px;
+    height: 100%;
+    width: 30%;
+    background-image: url(../picture/放大镜1.svg);
+    background-size: 15%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.search-text {
+
+    padding-top: 10px;
+    height: 80%;
+    width: 40%;
+    color: #797979;
+    font-size: 30px;
+}
+
+.active-around{
+
+    height: 100px;
+    width: 100%;
+    border-bottom: silver 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active {
+
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active1 {
+
+    height: 60%;
+    width: 40%;
+    font-size: 40px;
+    color: black;
+    padding-top: 5px;
+}
+
+.active2 {
+
+    height: 40px;
+    width: 80px;
+    background-image: url(../picture/箭头-银.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-right: silver 1px solid;
+}
+
+.around1 {
+
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.around {
+
+    height: 100%;
+    width: 50%;
+    background-image: url(../picture/头像女孩1.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pages-frame {
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: silver 1px solid;
+}
+
+.zmfriends {
+
+    margin-left: 50px;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.friends-count {
+    margin-top: 50px;
+    margin-right: 50px;
+    height: 100%;
+    width: 10%;
+    font-size: 40px;
+    color: black;
+}
+
+.friends-fenqu {
+    margin-top: 50px;
+    height: 100%;
+    width: 30%;
+    font-size: 40px;
+    color: black;
+}
+
+.friends-jiantou {
+
+    margin-left: 0px;
+    height: 40px;
+    width: 40px;
+    background-image: url(../picture/箭头-银.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.zmfriends-zunei {
+
+    margin-left: 100px;
+    height: 100%;
+    width: 45%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.active1-zunei {
+
+    height: 60%;
+    width: 40%;
+    font-size: 35px;
+    color: darkgray;
+    padding-top: 5px;
+}
+
+
+/*  盟友页面  end  */
+
+.btm-menu {
+
+    margin-bottom: 0px;
+    height: 140px;
+    width: 100%;
+    background-color: rgb(252,252,252);
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    display: flex;
+    justify-content: space-between;
+    border-top: silver 1px solid;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+    list-style-type: none;
+}
+
+.nav li{
+    width: 90px;
+    margin-right: 70px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.nav a{
+    display: block;
+    height: 90px;
+    background: url(../picture/btmmenu2.jpg) no-repeat;
+}
+.nav li:nth-of-type(1) a{
+
+    background-position: -30px center;
+}
+.nav li:nth-of-type(2) a{
+    background-position: -180px center;
+}
+.nav li:nth-of-type(3) a{
+    background-position: -330px center;
+}
+.nav li:nth-of-type(4) a{
+    background-position: -480px center;
+}
+.nav li:nth-of-type(5) a{
+    background-position: -630px center;
+}
+
